@@ -11,18 +11,18 @@ odpowiednimi bibliotekami.
 ## Uruchamianie aplikacji i testów
 
 ### Uruchamianie aplikacji w trybie deweloperskim
-    npm run dev
+    `npm run dev`
 
 ### Uruchamianie różnych rodzajów testów
 
 - **Testy jednostkowe i integracyjne**
-    npm run test
+    `npm run test`
 
 - **Testy E2E (End-to-End)**
-    npm run test:e2e
+    `npm run test:e2e`
 
 - **Sprawdzenie pokrycia testami (coverage)**
-    npm run test:coverage
+    `npm run test:coverage`
 
 ---
 
