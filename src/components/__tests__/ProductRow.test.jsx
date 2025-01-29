@@ -102,7 +102,7 @@ describe('ProductRow Komponent', () => {
     }));
   });
 
-  it('should call deleteProduct on delete', async () => {
+  it('powinien wywoływać deleteProduct po wciśnięciu "Usuń" ', async () => {
     const { getByText } = renderComponent(true);
     const deleteButton = getByText('Usuń');
 
@@ -114,7 +114,7 @@ describe('ProductRow Komponent', () => {
   });
 
 
-  it('should update description on input change', () => {
+  it('powinien aktualizować opis', () => {
     const { getByText, getByPlaceholderText } = renderComponent(true);
 
     fireEvent.click(getByText('Edytuj'));
@@ -127,7 +127,7 @@ describe('ProductRow Komponent', () => {
     expect(descriptionInput).toHaveValue('Updated Description');
   });
 
-  it('should update stock with valid values or empty string', () => {
+  it('powninien aktualizować stock z prawidłową wartością', () => {
     const { getByText, getByPlaceholderText } = renderComponent(true);
 
     fireEvent.click(getByText('Edytuj'));
@@ -151,7 +151,7 @@ describe('ProductRow Komponent', () => {
     expect(stockInput).toHaveValue(''); // Should not accept invalid value
   });
 
-  it('should not update stock with invalid value', () => {
+  it('niepowinien aktualizować stocku z nieprawidłową wartością', () => {
     const { getByText, getByPlaceholderText } = renderComponent(true);
 
     fireEvent.click(getByText('Edytuj'));
@@ -160,6 +160,6 @@ describe('ProductRow Komponent', () => {
     act(() => {
       fireEvent.change(stockInput, { target: { value: '-10' } });
     });
-    expect(stockInput).toHaveValue('10'); // Remains unchanged if invalid value is provided
+    expect(stockInput).toHaveValue('10');
   });
 });
