@@ -11,7 +11,7 @@ odpowiednimi bibliotekami.
 ## Uruchamianie aplikacji i testów
 
 ### Uruchamianie aplikacji w trybie deweloperskim
-    `npm run dev`
+    npm run dev
 
 ### Uruchamianie różnych rodzajów testów
 
